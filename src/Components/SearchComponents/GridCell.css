@@ -1,0 +1,130 @@
+.grid-cell {
+  width: 30px;
+  height: 0;
+  padding-bottom: 30px;
+  background-color: white;
+}
+
+.start-cell {
+  background-image: url("../SearchComponents/Images/tom.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  zoom: 100%;
+  animation-name: placeCell;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+}
+
+.goal-cell {
+  background-color: white;
+  background-image: url("../SearchComponents/Images/jerry.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: placeCell;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+}
+
+.wall-cell {
+  background: url("../SearchComponents/Images/brick.jpg");
+  background-size: contain;
+  animation-name: placeCell;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+}
+
+.visited {
+  /*   background-color: blue; */
+  animation-name: visitAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-timing-function: ease-out;
+  border-radius: 50%;
+}
+
+.route {
+  background-color: yellow;
+  animation-name: routeAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  border-radius: 20%;
+}
+
+@keyframes placeCell {
+  0% {
+    transform: scale(0.5);
+    border-radius: 100%;
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes visitAnimation {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    background-image: url("../SearchComponents/Images/tomRuning.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: rgb(58, 58, 70);
+  }
+  75% {
+    transform: scale(1.2);
+    background-image: url("../SearchComponents/Images/tomRuning.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(118, 115, 121);
+  }
+  100% {
+    transform: scale(1);
+    background-image: url("../SearchComponents/Images/tomRuning.png");
+    background-repeat: no-repeat;
+    background-color: rgb(133, 130, 134);
+  }
+}
+
+@keyframes routeAnimation {
+  0% {
+    transform: scale(0.5);
+    background-color: brown;
+  }
+  50% {
+    background-color: chartreuse;
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(233, 233, 77);
+  }
+}

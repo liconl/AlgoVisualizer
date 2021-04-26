@@ -1,0 +1,11 @@
+.grid-parent {
+  display: block;
+  margin-left: 8%;
+  margin-top: 1%;
+}
+
+@media only screen and (min-width: 2000px) {
+  .grid-parent {
+    margin-left: 18%;
+  }
+}
